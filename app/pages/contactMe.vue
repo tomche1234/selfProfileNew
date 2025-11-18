@@ -103,9 +103,10 @@ const success = ref(false)
 const error = ref(false)
 
 // Replace these with your EmailJS credentials
-const SERVICE_ID = 'service_pyl231m'
-const TEMPLATE_ID = 'template_h7ipsrj'
-const PUBLIC_KEY = '1q4bCA7mYLLdSQwZf'
+const config = useRuntimeConfig()
+const SERVICE_ID = config.public.SERVICE_ID
+const TEMPLATE_ID = config.public.TEMPLATE_ID
+const PUBLIC_KEY = config.public.PUBLIC_KEY
 
 async function submit() {
   // Check honeypot: if filled, likely a bot → ignore

@@ -11,6 +11,13 @@ export default defineNuxtConfig({
       ]
     }
   },
+  runtimeConfig: {
+    public: {
+      SERVICE_ID: process.env.SERVICE_ID,
+      TEMPLATE_ID: process.env.TEMPLATE_ID,
+      PUBLIC_KEY: process.env.PUBLIC_KEY,
+    }
+  },
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss'
